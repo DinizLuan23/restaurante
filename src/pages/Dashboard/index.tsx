@@ -11,8 +11,8 @@ import { FoodType } from "../../types";
 export function Dashboard() {
    const [foods, setFoods] = useState<FoodType[]>([]);
    const [editingFood, setEditingFood] = useState<FoodType>();
-   const [modalOpen, setModalOpen] = useState<Boolean>();
-   const [editModalOpen, setEditModalOpen] = useState<Boolean>();
+   const [modalOpen, setModalOpen] = useState(false);
+   const [editModalOpen, setEditModalOpen] = useState(false);
 
    useEffect(() => {
       const buscarComidas = async () => {

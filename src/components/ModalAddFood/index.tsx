@@ -3,13 +3,14 @@ import { FiCheckSquare } from "react-icons/fi";
 
 import { Form } from "./styles";
 import { Modal } from "../Modal";
-import Input from "../Input";
+import { Input } from "../Input";
+import { FoodType, ModalAddFoodProps } from "../../types";
 
-export function ModalAddFood({ isOpen, setIsOpen, handleAddFood }){
+export function ModalAddFood({ isOpen, setIsOpen, handleAddFood }: ModalAddFoodProps){
 
    const formRef = createRef();
 
-   async function handleSubmit(data) {
+   async function handleSubmit(data: FoodType) {
       handleAddFood(data);
       setIsOpen();
    };
